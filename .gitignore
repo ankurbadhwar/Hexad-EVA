@@ -1,0 +1,14 @@
+# Secrets
+/backend/.env
+*.env
+
+# Storage
+/backend/storage/
+backend/logs/
+
+# Python
+_pycache_/
+*.pyc
+.env
+venv/
+.venv/
