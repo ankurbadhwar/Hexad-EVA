@@ -74,6 +74,7 @@ def simple_mutation(best_agent):
     Replace this with evolutionary strategies calling LLM for mutation and re-evaluation.
     """
     new_prompt = best_agent['prompt']
+    
     if 'concise' not in new_prompt.lower():
         new_prompt = 'Be concise. ' + new_prompt
     
@@ -96,8 +97,7 @@ def simple_mutation(best_agent):
 st.title('EVA — The AI That Builds Other AIs (Streamlit MVP)')
 st.markdown("""
 EVA automates: **generate → build → test → evolve → finalize** an agent for the user's task.
-This prototype demonstrates the *frontend flow*. Replace the fake_* functions with calls to
-an LLM provider and your evaluation pipeline for a full implementation.
+
 """)
 
 with st.sidebar:
@@ -219,6 +219,7 @@ if st.session_state.get('evolved'):
     st.write('Re-test results (simulated):')
     st.json(ev['retest'])
 
+
 st.markdown('---')
 st.subheader('Finalize')
 if st.session_state.get('evolved'):
@@ -233,6 +234,7 @@ if st.session_state.get('evolved'):
     st.download_button('Download final agent (JSON)', data=payload, file_name='eva_final_agent.json')
 else:
     st.info('Evolve an agent to enable finalization and export.')
+
 
 st.markdown('---')
 st.caption('Streamlit EVA MVP — replace fake generation/testing with live LLM calls and evaluation metric code for a production version.')
