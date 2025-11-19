@@ -1,0 +1,14 @@
+[
+  {
+    "id": "tc1",
+    "input": "This lecture explains how autonomous AI systems can design, evaluate, and evolve other AI agents.",
+    "gold": "Autonomous system that designs agents; Evaluates agents with metrics; Evolves better agents over time.",
+    "target_words": 60
+  },
+  {
+    "id": "tc2",
+    "input": "We study meta-AI: AI that operates on other AIs, improving prompts and agent behavior automatically.",
+    "gold": "AI that optimizes other AIs; Automates prompt engineering; Improves behavior through evaluation.",
+    "target_words": 60
+  }
+]
